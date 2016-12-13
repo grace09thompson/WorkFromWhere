@@ -13,6 +13,8 @@
 		2EEE4A591E00A9C6009AC52B /* WorkFromWhere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE4A571E00A9C6009AC52B /* WorkFromWhere.xcdatamodeld */; };
 		2EEE4A5B1E00A9C6009AC52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE4A5A1E00A9C6009AC52B /* Assets.xcassets */; };
 		2EEE4A5E1E00A9C6009AC52B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE4A5C1E00A9C6009AC52B /* LaunchScreen.storyboard */; };
+		2EEE4A671E00AE51009AC52B /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE4A651E00AE51009AC52B /* CellView.xib */; };
+		2EEE4A691E00AEEA009AC52B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE4A681E00AEEA009AC52B /* CellView.swift */; };
 		47074D30C4732890CF8CACE8 /* Pods_WorkFromWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541F3E4A4F3EE3BBA34761C /* Pods_WorkFromWhere.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		2EEE4A5A1E00A9C6009AC52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EEE4A5D1E00A9C6009AC52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EEE4A5F1E00A9C6009AC52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EEE4A661E00AE51009AC52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = WorkFromWhere/Base.lproj/CellView.xib; sourceTree = "<group>"; };
+		2EEE4A681E00AEEA009AC52B /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		9A6AE1EAFDB74CA50A200EEE /* Pods-WorkFromWhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkFromWhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkFromWhere/Pods-WorkFromWhere.debug.xcconfig"; sourceTree = "<group>"; };
 		D541F3E4A4F3EE3BBA34761C /* Pods_WorkFromWhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkFromWhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +69,8 @@
 			children = (
 				2EEE4A501E00A9C6009AC52B /* AppDelegate.swift */,
 				2EEE4A521E00A9C6009AC52B /* ViewController.swift */,
+				2EEE4A681E00AEEA009AC52B /* CellView.swift */,
+				2EEE4A651E00AE51009AC52B /* CellView.xib */,
 				2EEE4A541E00A9C6009AC52B /* Main.storyboard */,
 				2EEE4A5A1E00A9C6009AC52B /* Assets.xcassets */,
 				2EEE4A5C1E00A9C6009AC52B /* LaunchScreen.storyboard */,
@@ -153,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEE4A671E00AE51009AC52B /* CellView.xib in Resources */,
 				2EEE4A5E1E00A9C6009AC52B /* LaunchScreen.storyboard in Resources */,
 				2EEE4A5B1E00A9C6009AC52B /* Assets.xcassets in Resources */,
 				2EEE4A561E00A9C6009AC52B /* Main.storyboard in Resources */,
@@ -214,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEE4A691E00AEEA009AC52B /* CellView.swift in Sources */,
 				2EEE4A531E00A9C6009AC52B /* ViewController.swift in Sources */,
 				2EEE4A511E00A9C6009AC52B /* AppDelegate.swift in Sources */,
 				2EEE4A591E00A9C6009AC52B /* WorkFromWhere.xcdatamodeld in Sources */,
@@ -237,6 +245,15 @@
 				2EEE4A5D1E00A9C6009AC52B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2EEE4A651E00AE51009AC52B /* CellView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEE4A661E00AE51009AC52B /* Base */,
+			);
+			name = CellView.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
