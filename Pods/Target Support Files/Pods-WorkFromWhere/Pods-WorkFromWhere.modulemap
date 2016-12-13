@@ -1,0 +1,6 @@
+framework module Pods_WorkFromWhere {
+  umbrella header "Pods-WorkFromWhere-umbrella.h"
+
+  export *
+  module * { export * }
+}

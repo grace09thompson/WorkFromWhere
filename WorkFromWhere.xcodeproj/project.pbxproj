@@ -13,9 +13,11 @@
 		2EEE4A591E00A9C6009AC52B /* WorkFromWhere.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE4A571E00A9C6009AC52B /* WorkFromWhere.xcdatamodeld */; };
 		2EEE4A5B1E00A9C6009AC52B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE4A5A1E00A9C6009AC52B /* Assets.xcassets */; };
 		2EEE4A5E1E00A9C6009AC52B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEE4A5C1E00A9C6009AC52B /* LaunchScreen.storyboard */; };
+		47074D30C4732890CF8CACE8 /* Pods_WorkFromWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D541F3E4A4F3EE3BBA34761C /* Pods_WorkFromWhere.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120A6280D1E2F1B2DC2EA9AC /* Pods-WorkFromWhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkFromWhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkFromWhere/Pods-WorkFromWhere.release.xcconfig"; sourceTree = "<group>"; };
 		2EEE4A4D1E00A9C5009AC52B /* WorkFromWhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkFromWhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EEE4A501E00A9C6009AC52B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EEE4A521E00A9C6009AC52B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2EEE4A5A1E00A9C6009AC52B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EEE4A5D1E00A9C6009AC52B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EEE4A5F1E00A9C6009AC52B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A6AE1EAFDB74CA50A200EEE /* Pods-WorkFromWhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkFromWhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkFromWhere/Pods-WorkFromWhere.debug.xcconfig"; sourceTree = "<group>"; };
+		D541F3E4A4F3EE3BBA34761C /* Pods_WorkFromWhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkFromWhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47074D30C4732890CF8CACE8 /* Pods_WorkFromWhere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2EEE4A4F1E00A9C5009AC52B /* WorkFromWhere */,
 				2EEE4A4E1E00A9C5009AC52B /* Products */,
+				4DE8E063CC4648054A2AC857 /* Pods */,
+				40869418284C5A4F923D56CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = WorkFromWhere;
 			sourceTree = "<group>";
 		};
+		40869418284C5A4F923D56CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D541F3E4A4F3EE3BBA34761C /* Pods_WorkFromWhere.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DE8E063CC4648054A2AC857 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A6AE1EAFDB74CA50A200EEE /* Pods-WorkFromWhere.debug.xcconfig */,
+				120A6280D1E2F1B2DC2EA9AC /* Pods-WorkFromWhere.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EEE4A621E00A9C6009AC52B /* Build configuration list for PBXNativeTarget "WorkFromWhere" */;
 			buildPhases = (
+				CEC03C589F5A0522D8FF39F4 /* [CP] Check Pods Manifest.lock */,
 				2EEE4A491E00A9C5009AC52B /* Sources */,
 				2EEE4A4A1E00A9C5009AC52B /* Frameworks */,
 				2EEE4A4B1E00A9C5009AC52B /* Resources */,
+				E5CD167B9394F8344D69771C /* [CP] Embed Pods Frameworks */,
+				0332E49268EA82A92E1D33EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0332E49268EA82A92E1D33EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkFromWhere/Pods-WorkFromWhere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC03C589F5A0522D8FF39F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CD167B9394F8344D69771C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkFromWhere/Pods-WorkFromWhere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EEE4A491E00A9C5009AC52B /* Sources */ = {
@@ -262,7 +337,9 @@
 		};
 		2EEE4A631E00A9C6009AC52B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6AE1EAFDB74CA50A200EEE /* Pods-WorkFromWhere.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkFromWhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,7 +351,9 @@
 		};
 		2EEE4A641E00A9C6009AC52B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 120A6280D1E2F1B2DC2EA9AC /* Pods-WorkFromWhere.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkFromWhere/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -303,6 +382,7 @@
 				2EEE4A641E00A9C6009AC52B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
