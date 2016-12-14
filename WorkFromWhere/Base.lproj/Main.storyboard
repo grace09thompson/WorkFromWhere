@@ -24,11 +24,19 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUE-9u-sdT" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
                                 <rect key="frame" x="19" y="111" width="337" height="445"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1127664818" green="0.62342148050000001" blue="0.99815553430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-Zn-LGI">
+                                <rect key="frame" x="154.5" y="76.5" width="65.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fUq-Zn-LGI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1lU-FH-thg"/>
+                            <constraint firstItem="nUE-9u-sdT" firstAttribute="top" secondItem="fUq-Zn-LGI" secondAttribute="bottom" constant="8" id="6uS-x3-ip8"/>
                             <constraint firstItem="nUE-9u-sdT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="RDb-f6-UCR"/>
                             <constraint firstItem="nUE-9u-sdT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gIf-2z-ukf"/>
                             <constraint firstItem="nUE-9u-sdT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="hz8-op-lag"/>
@@ -37,6 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="calendarView" destination="nUE-9u-sdT" id="Hbi-oq-dIh"/>
+                        <outlet property="monthLabel" destination="fUq-Zn-LGI" id="IvJ-zZ-Jr6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

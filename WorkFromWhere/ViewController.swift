@@ -19,17 +19,38 @@ class ViewController: UIViewController {
     let orange = UIColor(colorWithHexValue: 0xF5982F)
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    
+    @IBOutlet weak var monthLabel: UILabel!
+    
+    var currentCalendar = Calendar.current
 
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.registerCellViewXib(file: "CellView") //Register the cell
+        
+        //setup calendar with current month 
+        calendarView.visibleDates { (visibleDates: DateSegmentInfo) in
+            self.setupViewsOfCalendar(from: visibleDates)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Function to setup and display the current month 
+    func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
+        guard let startDate = visibleDates.monthDates.first else {
+            return
+        }
+        let month = currentCalendar.dateComponents([.month], from: startDate).month!
+        print("MONTH ", month)
+        let monthName = DateFormatter().monthSymbols[(month-1) % 12]
+        let year = currentCalendar.component(.year, from: startDate)
+        monthLabel.text = monthName + " " + String(year)
     }
     
     // Function to handle the text color of the calendar
@@ -40,10 +61,10 @@ class ViewController: UIViewController {
         }
         
         if cellState.isSelected {
-            myCustomCell.dayLabel.textColor = white
+            myCustomCell.dayLabel.textColor = black
         } else {
             if cellState.dateBelongsTo == .thisMonth {
-                myCustomCell.dayLabel.textColor = black
+                myCustomCell.dayLabel.textColor = white
             } else {
                 myCustomCell.dayLabel.textColor = gray
             }
@@ -122,6 +143,10 @@ extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDele
         handleCellTextColor(view: cell, cellState: cellState)
         /*let myCustomCell = cell as! CellView
         myCustomCell.selectedView.isHidden = true */
+    }
+    //function to setup calendar with month label
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        self.setupViewsOfCalendar(from: visibleDates)
     }
 }
 
