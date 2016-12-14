@@ -15,19 +15,14 @@
             <rect key="frame" x="0.0" y="0.0" width="341" height="279"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-3o-ryT">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdf-IT-uZ5">
                     <rect key="frame" x="145" y="114" width="50" height="50"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdf-IT-uZ5">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.74858197773972601" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="W61-tw-Wv2"/>
-                                <constraint firstAttribute="height" constant="50" id="hDc-iF-BS6"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                </stackView>
+                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.74858197773972601" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="W61-tw-Wv2"/>
+                        <constraint firstAttribute="height" constant="50" id="hDc-iF-BS6"/>
+                    </constraints>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateTextGoesHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-lR-m1Q">
                     <rect key="frame" x="99" y="129.5" width="142" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,10 +32,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="z5b-3o-ryT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Mpb-xM-iMx"/>
+                <constraint firstItem="sdf-IT-uZ5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Oh-Zf-TGZ"/>
                 <constraint firstItem="8bs-lR-m1Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NCR-su-sEC"/>
-                <constraint firstItem="z5b-3o-ryT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ONt-N1-iPf"/>
                 <constraint firstItem="8bs-lR-m1Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dx9-y6-cg2"/>
+                <constraint firstItem="sdf-IT-uZ5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n9E-6n-R0K"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

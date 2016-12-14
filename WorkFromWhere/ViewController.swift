@@ -31,6 +31,37 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Function to handle the text color of the calendar
+    func handleCellTextColor(view: JTAppleDayCellView?, cellState: CellState) {
+        
+        guard let myCustomCell = view as? CellView  else {
+            return
+        }
+        
+        if cellState.isSelected {
+            myCustomCell.dayLabel.textColor = white
+        } else {
+            if cellState.dateBelongsTo == .thisMonth {
+                myCustomCell.dayLabel.textColor = black
+            } else {
+                myCustomCell.dayLabel.textColor = gray
+            }
+        }
+    }
+    
+    // Function to handle the calendar selection
+    func handleCellSelection(view: JTAppleDayCellView?, cellState: CellState) {
+        guard let myCustomCell = view as? CellView  else {
+            return
+        }
+        if cellState.isSelected {
+            myCustomCell.selectedView.layer.cornerRadius =  25
+            myCustomCell.selectedView.isHidden = false
+        } else {
+            myCustomCell.selectedView.isHidden = true
+        }
+    }
 
 }
 
@@ -61,16 +92,21 @@ extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDele
         //default cell to deselected
         myCustomCell.selectedView.isHidden = true
         
+        handleCellTextColor(view: cell, cellState: cellState)
+        handleCellSelection(view: cell, cellState: cellState)
+        
         //setup text color 
-        if cellState.dateBelongsTo == .thisMonth {
+    /*    if cellState.dateBelongsTo == .thisMonth {
             myCustomCell.dayLabel.textColor = black
         } else {
             myCustomCell.dayLabel.textColor = gray
-        }
+        } */
     }
     //function to select a date cell 
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
-        let myCustomCell = cell as! CellView
+        handleCellSelection(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState)
+       /* let myCustomCell = cell as! CellView
         
         //rounded corners for selected cell 
         myCustomCell.selectedView.layer.cornerRadius = 25
@@ -78,12 +114,14 @@ extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDele
         //if selected, don't hide 
         if cellState.isSelected {
             myCustomCell.selectedView.isHidden = false
-        }
+        } */
     }
     //function to deselect a date cell 
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
-        let myCustomCell = cell as! CellView
-        myCustomCell.selectedView.isHidden = true
+        handleCellSelection(view: cell, cellState: cellState)
+        handleCellTextColor(view: cell, cellState: cellState)
+        /*let myCustomCell = cell as! CellView
+        myCustomCell.selectedView.isHidden = true */
     }
 }
 
